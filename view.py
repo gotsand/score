@@ -16,8 +16,8 @@ l_pri = [pri, pri + 3, pri + 6]
 
 head = str(month) + '月'
 prize =   '入賞順位：' + str(pri) + '位，' + str(pri + 3) + '位，' + str(pri + 6) + '位'
-st.title(head)
-st.header(prize)
+st.header(head)
+st.write(prize)
 
 df_all = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
     
