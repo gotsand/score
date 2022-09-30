@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import numpy as np
+import pickle
 
 pd.options.display.float_format = '{:.1f}'.format
 tod = datetime.datetime.now()
@@ -64,4 +65,4 @@ df_add = pd.concat([df_org, df_d], axis=0)
 st.write(df_add)
 
 if st.button('データベース更新'):
-    df_add.to_csv('master1.csv', encoding = 'UTF-8-sig', index=False)
+    df_add.to_pickle('master.pkl', encoding = 'UTF-8-sig', index=False)
