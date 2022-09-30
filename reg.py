@@ -25,12 +25,18 @@ if st.button('追加'):
     df_c = pd.concat([df, df_n], axis=0)
     df_c.to_csv('member.csv', encoding = 'UTF-8-sig',index=False)
 
+st.sidebar.write('参加者')
+
+num = 0
 l_bool = []  
 for mem in l_mem:
     if st.sidebar.checkbox(mem):
         l_bool.append('出')
+        num = num + 1
     else:
         l_bool.append('欠')
+        
+st.sidebar.write(str(num) +'人')
 
 df_d = pd.DataFrame()
 df_d['参加'] = l_bool
