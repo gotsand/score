@@ -42,10 +42,11 @@ df_d['なまえ'] = l_mem
 df_d['日付'] = date
 df_d['参加点'] = 2
 
+st.write(df_d)
+
 df_d = df_d.query('参加 == "True"')
 l_part = df_d['なまえ'].tolist() 
 
-st.write(df_d)
 
 l_po = []
 for part in l_part:
@@ -55,7 +56,6 @@ for part in l_part:
 df_d['得点'] = l_po
 
 df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
-
 
 df_add = pd.concat([df_org, df_d], axis=0)
 
