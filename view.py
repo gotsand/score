@@ -31,7 +31,7 @@ for date in l_date:
     if len(dd) == 2:
         dd = '0' + dd
     l_dd.append(dd)
-    mm = date[0:x]
+    mm = date[0:x+1]
     l_mm.append(mm)
 
 l_vmm = ['9月', '10月']
