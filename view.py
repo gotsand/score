@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import numpy as np
+import pickle
 
 pd.options.display.float_format = '{:.1f}'.format
 dt_now = datetime.datetime.now()
@@ -16,8 +17,8 @@ l_pri = [pri, pri + 3, pri + 6]
 
 head = str(month) + '月'
 prize =   '入賞順位：' + str(pri) + '位，' + str(pri + 3) + '位，' + str(pri + 6) + '位'
-st.header(head)
-st.write(prize)
+st.title(head)
+st.header(prize)
 
 df_all = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
     
@@ -33,7 +34,7 @@ for date in l_date:
     mm = date[0:x+1]
     l_mm.append(mm)
 
-l_vmm = ['9月', '10月']
+l_vmm = ['9月', '10月', '11月', '12月']
 
 target = st.selectbox(label="表示月選択",options=l_vmm)
 
@@ -97,10 +98,16 @@ for namae in l_namae:
 
 pd.options.display.float_format = '{:.1f}'.format
 df3.insert(0, '入賞', l_win)
-st.write('＜得点表＞')
-st.dataframe(df3, width=1000)
 
+if len(df3)>1:
+    st.dataframe(df3, width=1000)
+else:
+    st.write('まだ')
+    
 df_p.set_index('なまえ',inplace=True)
 
-st.write('＜得点グラフ＞')
-st.bar_chart(df_p)
+if len(df3)>1:
+    st.write('\n\n')
+    st.bar_chart(df_p)
+else:
+    st.write('です')
