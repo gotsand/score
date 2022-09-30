@@ -98,8 +98,7 @@ for namae in l_namae:
 pd.options.display.float_format = '{:.1f}'.format
 df3.insert(0, '入賞', l_win)
 st.write('＜得点表＞')
-AgGrid(df3,theme="blue")
-#st.dataframe(df3, width=1000)
+st.dataframe(df3, width=1000)
 
 df_p.set_index('なまえ',inplace=True)
 
