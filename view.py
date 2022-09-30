@@ -5,10 +5,6 @@ import pandas as pd
 import datetime
 import numpy as np
 
-with st.spinner('Wait for it...'):
-    time.sleep(5)
-st.success('Done!')
-
 pd.options.display.float_format = '{:.1f}'.format
 dt_now = datetime.datetime.now()
 date = str(dt_now.strftime('%m/%d'))
