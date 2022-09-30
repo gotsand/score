@@ -36,8 +36,6 @@ for mem in l_mem:
     else:
         l_bool.append('欠')
         
-st.sidebar.write(str(num) +'人')
-
 df_d = pd.DataFrame()
 df_d['参加'] = l_bool
 df_d['なまえ'] = l_mem
@@ -55,6 +53,7 @@ for part in l_part:
 df_d['得点'] = l_po
 df_d.drop(columns='参加', inplace=True)
 
+st.write(str(num) +'人参加')
 st.write(df_d)
 
 df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
