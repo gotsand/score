@@ -27,7 +27,7 @@ if st.button('追加'):
 #    df.iat[-1,0] = new
     df_c.to_csv('member.csv', encoding = 'UTF-8-sig',index=False)
 
-l_part = st.multiselect('参加者選択',l_mem)
+#l_part = st.multiselect('参加者選択',l_mem)
 
 l_bool = []  
 for mem in l_mem:
@@ -40,14 +40,18 @@ df_d = pd.DataFrame()
 df_d['参加'] = l_bool
 df_d['なまえ'] = l_mem
 df_d['日付'] = date
-df_d['得点'] = l_po
 df_d['参加点'] = 2
+
+df_d = df_d.query('参加 == "True"')
+l_part = df_d['なまえ'].tolost() 
 
 l_po = []
 for part in l_part:
     po = st.number_input(part,0,100,0)
     l_po.append(po)
 
+ df_d['得点'] = l_po   
+ 
 df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 
 
