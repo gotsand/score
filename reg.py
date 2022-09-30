@@ -50,10 +50,9 @@ for part in l_part:
     po = st.number_input(part,0,100,0)
     l_po.append(po)
 
- df_d['得点'] = l_po   
- 
-df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
+df_d['得点'] = l_po
 
+df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 
 st.write(df_d)
 
