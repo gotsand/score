@@ -4,7 +4,6 @@ import streamlit as st
 import pandas as pd
 import datetime
 import numpy as np
-from st_aggrid import AgGrid
 
 pd.options.display.float_format = '{:.1f}'.format
 dt_now = datetime.datetime.now()
