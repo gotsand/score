@@ -61,5 +61,7 @@ df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 
 df_add = pd.concat([df_org, df_d], axis=0)
 
+st.write(df_add)
+
 if st.button('データベース更新'):
     df_add.to_csv('master.csv', encoding = 'UTF-8-sig',index=False)
