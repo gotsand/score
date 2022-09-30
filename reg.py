@@ -30,7 +30,7 @@ if st.button('追加'):
 l_part = st.multiselect('参加者選択',l_mem)
 
 for mem in l_mem:
-    st.checkbox(mem)
+    st.sidebar.checkbox(mem)
 
 l_po = []
 for part in l_part:
