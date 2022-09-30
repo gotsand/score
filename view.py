@@ -99,7 +99,14 @@ for namae in l_namae:
 pd.options.display.float_format = '{:.1f}'.format
 df3.insert(0, '入賞', l_win)
 
-st.dataframe(df3, width=1000)  
+st.dataframe(df3, width=1000)
+
+df_sum = pd.DataFrame()
+df_sum['なまえ'] = df3['なまえ']
+df_sum['合計'] = df3['合計'].astype(int)
+df_p = pd.merge(df_p, df_sum, on='なまえ', how='left').reset_index(drop=True)
+df_p = df_p.sort_values(['合計'], ascending=False)
+df_p = df_p.iloc[:,0:-1]
 df_p.set_index('なまえ',inplace=True)
 
 st.write('\n\n')
