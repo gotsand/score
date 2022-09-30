@@ -48,7 +48,7 @@ l_part = df_d['なまえ'].tolist()
 
 l_po = []
 for part in l_part:
-    po = st.select_box(part, options=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], key='int')
+    po = st.select_box(part, (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20))
     l_po.append(po)
 
 df_d['得点'] = l_po
