@@ -6,11 +6,9 @@ import datetime
 import numpy as np
 
 pd.options.display.float_format = '{:.1f}'.format
-tod = datetime.datetime.now()
+tod = datetime.date.now()
 
-dt_now = st.date_input(
-    '開催日',
-    datetime.date(tod))
+dt_now = st.date_input('開催日', tod)
 date = str(dt_now.strftime('%m/%d'))
 month = int(dt_now.strftime('%m'))
 
