@@ -11,15 +11,6 @@ dt_now = datetime.datetime.now()
 date = str(dt_now.strftime('%m/%d'))
 month = int(dt_now.strftime('%m'))
 
-pri = (month-1)%3 + 1
-
-l_pri = [pri, pri + 3, pri + 6]
-
-head = str(month) + '月'
-prize =   '入賞順位：' + str(pri) + '位，' + str(pri + 3) + '位，' + str(pri + 6) + '位'
-st.write(head)
-st.write(prize)
-
 df_all = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
     
 l_mm = []
@@ -38,6 +29,15 @@ l_vmm = ['9月', '10月']
 
 target = st.selectbox(label="表示月選択", options=l_vmm)
 
+y = target.find('月')
+mo = int(target[0:x+1])
+
+pri = (mo-1) %3 + 1
+l_pri = [pri, pri + 3, pri + 6]
+ 
+prize =   '入賞順位：' + str(pri) + '位，' + str(pri + 3) + '位，' + str(pri + 6) + '位'
+st.write(prize)
+
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
 
@@ -47,7 +47,6 @@ df3 = pd.pivot_table(df2, index='なまえ', columns='日付', values='得点', 
 df3 = df3.fillna(0)
 df3 = df3.reset_index()
 
-df_g = df3
 
 df4 = pd.pivot_table(df2, index='なまえ', columns='日付', values='参加点', margins=True, margins_name='参加点', aggfunc=np.sum)
 df4 = df4.fillna(0)
@@ -102,6 +101,5 @@ df3.insert(0, '入賞', l_win)
 st.dataframe(df3, width=1000)
 
 df_p.set_index('なまえ',inplace=True)
-
 st.write('\n\n')
 st.bar_chart(df_p)
