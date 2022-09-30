@@ -31,11 +31,18 @@ for date in l_date:
     if len(dd) == 2:
         dd = '0' + dd
     l_dd.append(dd)
-    mm = date[0:x+1]
+    mm = date[0:x]
     l_mm.append(mm)
 
-l_vmm = list(set(l_mm))
-target = st.selectbox(label="表示月選択",options=l_vmm)
+l_vmm = sorted(list(set(l_mm)))
+l_vmm = l_vmm[1:]
+
+l_smm = []
+for vmm in l_vmm:
+    smm = str(vmm) + '月'
+    l_smm.append(smm)
+
+target = st.selectbox(label="表示月選択", options=l_smm)
 
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
