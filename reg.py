@@ -6,7 +6,7 @@ import datetime
 import numpy as np
 
 pd.options.display.float_format = '{:.1f}'.format
-tod = datetime.date.now()
+tod = datetime.datetime.now()
 
 dt_now = st.date_input('開催日', tod)
 date = str(dt_now.strftime('%m/%d'))
