@@ -45,6 +45,8 @@ df_d['参加点'] = 2
 df_d = df_d.query('参加 == "True"')
 l_part = df_d['なまえ'].tolist() 
 
+st.write(df_d)
+
 l_po = []
 for part in l_part:
     po = st.number_input(part,0,100,0)
@@ -54,7 +56,6 @@ df_d['得点'] = l_po
 
 df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 
-st.write(df_d)
 
 df_add = pd.concat([df_org, df_d], axis=0)
 
