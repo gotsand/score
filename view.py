@@ -34,15 +34,9 @@ for date in l_date:
     mm = date[0:x]
     l_mm.append(mm)
 
-l_vmm = sorted(list(set(l_mm)))
-l_vmm = l_vmm[1:]
+l_vmm = ['9月', '10月']
 
-l_smm = []
-for vmm in l_vmm:
-    smm = str(vmm) + '月'
-    l_smm.append(smm)
-
-target = st.selectbox(label="表示月選択", options=l_smm)
+target = st.selectbox(label="表示月選択", options=l_vmm)
 
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
