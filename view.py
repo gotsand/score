@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import numpy as np
+from st_aggrid import AgGrid
 
 pd.options.display.float_format = '{:.1f}'.format
 dt_now = datetime.datetime.now()
@@ -98,7 +99,8 @@ for namae in l_namae:
 pd.options.display.float_format = '{:.1f}'.format
 df3.insert(0, '入賞', l_win)
 st.write('＜得点表＞')
-st.dataframe(df3, width=1000)
+AgGrid(df3,theme="blue")
+#st.dataframe(df3, width=1000)
 
 df_p.set_index('なまえ',inplace=True)
 
