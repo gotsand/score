@@ -34,7 +34,8 @@ for date in l_date:
     mm = date[0:x+1]
     l_mm.append(mm)
 
-l_vmm = ['9月', '10月', '11月', '12月']
+l_vmm = list(set(l_mm))
+l_vmm = l_vmm[1:]
 
 target = st.selectbox(label="表示月選択",options=l_vmm)
 
@@ -99,15 +100,8 @@ for namae in l_namae:
 pd.options.display.float_format = '{:.1f}'.format
 df3.insert(0, '入賞', l_win)
 
-if len(df3)>1:
-    st.dataframe(df3, width=1000)
-else:
-    st.write('まだ')
-    
+st.dataframe(df3, width=1000)  
 df_p.set_index('なまえ',inplace=True)
 
-if len(df3)>1:
-    st.write('\n\n')
-    st.bar_chart(df_p)
-else:
-    st.write('です')
+st.write('\n\n')
+st.bar_chart(df_p)
