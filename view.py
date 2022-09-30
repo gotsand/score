@@ -35,8 +35,7 @@ for date in l_date:
     l_mm.append(mm)
 
 l_vmm = list(set(l_mm))
-l_vmm = l_vmm[1:]
-
+l_vmm = l_vmm - ['8月']
 target = st.selectbox(label="表示月選択",options=l_vmm)
 
 df_all['月'] = l_mm
