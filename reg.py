@@ -6,7 +6,10 @@ import datetime
 import numpy as np
 
 pd.options.display.float_format = '{:.1f}'.format
-dt_now = datetime.datetime.now()
+
+dt_now = st.date_input(
+    '開催日',
+    datetime.date(2022, 1, 1))
 date = str(dt_now.strftime('%m/%d'))
 month = int(dt_now.strftime('%m'))
 
@@ -25,6 +28,9 @@ if st.button('追加'):
     df_c.to_csv('member.csv', encoding = 'UTF-8-sig',index=False)
 
 l_part = st.multiselect('参加者選択',l_mem)
+
+for mem in l_mem:
+    st.checkbox(mem)
 
 l_po = []
 for part in l_part:
