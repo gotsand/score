@@ -43,7 +43,7 @@ df_d['日付'] = date
 df_d['参加点'] = 2
 
 df_d = df_d.query('参加 == "True"')
-l_part = df_d['なまえ'].tolost() 
+l_part = df_d['なまえ'].tolist() 
 
 l_po = []
 for part in l_part:
