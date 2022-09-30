@@ -36,6 +36,13 @@ for mem in l_mem:
     
 st.write(l_bool)
 
+df_d = pd.DataFrame()
+df_d['参加'] = l_bool
+df_d['なまえ'] = l_mem
+df_d['日付'] = date
+df_d['得点'] = l_po
+df_d['参加点'] = 2
+
 l_po = []
 for part in l_part:
     po = st.number_input(part,0,100,0)
@@ -43,11 +50,6 @@ for part in l_part:
 
 df_org = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 
-df_d = pd.DataFrame()
-df_d['なまえ'] = l_part
-df_d['日付'] = date
-df_d['得点'] = l_po
-df_d['参加点'] = 2
 
 st.write(df_d)
 
