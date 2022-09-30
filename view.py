@@ -30,9 +30,9 @@ l_vmm = ['9月', '10月']
 target = st.selectbox(label="表示月選択", options=l_vmm)
 
 y = target.find('月')
-mo = target[0:x+1].astype(int)
+mo = target[0:y]
 
-pri = (mo-1) %3 + 1
+pri = (int(mo)-1) %3 + 1
 l_pri = [pri, pri + 3, pri + 6]
  
 prize =   '入賞順位：' + str(pri) + '位，' + str(pri + 3) + '位，' + str(pri + 6) + '位'
