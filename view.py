@@ -25,7 +25,7 @@ for date in l_date:
     mm = date[0:x+1]
     l_mm.append(mm)
 
-l_vmm = ['9月', '10月']
+l_vmm = ['10月', '9月']
 
 target = st.selectbox(label="表示月選択", options=l_vmm)
 
