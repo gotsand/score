@@ -101,5 +101,5 @@ df3.insert(0, '入賞', l_win)
 st.dataframe(df3, width=1000)
 
 df_p.set_index('なまえ',inplace=True)
-st.write('\n\n')
+st.write('\n\n得点グラフ')
 st.bar_chart(df_p)
