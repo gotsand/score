@@ -95,7 +95,7 @@ pd.options.display.float_format = '{:.2f}'.format
 df3.insert(0, '入賞', l_win)
 df3 = df3.drop('平均', axis=1)
 
-st.dataframe(df3, width=1000)
+st.dataframe(df3)
 
 df_p.set_index('なまえ',inplace=True)
 st.write('\n\n得点グラフ')
