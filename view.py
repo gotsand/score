@@ -6,6 +6,7 @@ import datetime
 import numpy as np
 import pickle
 
+st.set_page_config(page_title="得点表", layout="wide")
 pd.options.display.float_format = '{:.1f}'.format
 dt_now = datetime.datetime.now()
 date = str(dt_now.strftime('%m/%d'))
