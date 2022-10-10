@@ -73,17 +73,12 @@ df3 = df3.drop('得点合計', axis=1)
 
 df_p = df3.iloc[0:-1,0:-2]
 
+
 df3 = pd.merge(df3, df7, on='なまえ', how='left')
 df3 = df3.sort_values(['合計', '平均'], ascending=False).reset_index(drop=True)
 
-df3 = df3[1:].astype('str')
-l_means = df3['平均'].tolist()
-
-l_ave = []
-for means in l_means:
-    ave = means[0:4]
-    l_ave.append(ave)
-df3['平均'] = l_ave
+df3 = df3[1:]
+df3.iloc[:,1:] = df3.iloc[:,1:].astype('int')
 
 l_namae = df3['なまえ'].tolist() 
 
@@ -96,8 +91,9 @@ for namae in l_namae:
         l_win.append('')      
     r = r + 1
 
-pd.options.display.float_format = '{:.1f}'.format
+pd.options.display.float_format = '{:.2f}'.format
 df3.insert(0, '入賞', l_win)
+df3 = df3.drop('平均', axis=1)
 
 st.dataframe(df3, width=1000)
 
