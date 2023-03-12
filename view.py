@@ -43,7 +43,10 @@ st.write(prize)
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
 
-df2 = df_all.query('月 == @target')
+if len(mo) ==1:
+    df2 = df_all[df_all['月'] == '0' + mo]
+else:
+    df2 = df_all[df_all['月'] == mo]
 
 df3 = pd.pivot_table(df2, index='なまえ', columns='日付', values='得点', margins=True, margins_name='得点合計', aggfunc=np.sum)
 df3 = df3.fillna(0)
