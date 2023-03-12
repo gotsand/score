@@ -50,5 +50,5 @@ if len(mo) ==1:
 else:
     df2 = df_all[df_all['月'] == mo]
 
-st.dataframe(df_all.dtypes)    
+st.dataframe(df_all)    
 st.dataframe(df2)
