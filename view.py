@@ -43,11 +43,12 @@ st.write(prize)
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
 
-st.write(mo)
+st.write('0' + mo)
 
 if len(mo) ==1:
     df2 = df_all[df_all['月'] == '0' + mo]
 else:
     df2 = df_all[df_all['月'] == mo]
 
+st.dataframe(df_all.dtypes)    
 st.dataframe(df2)
