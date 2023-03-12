@@ -46,9 +46,9 @@ df_all['日付'] = l_dd
 st.write('0' + mo)
 
 if len(mo) ==1:
-    df2 = df_all[df_all['月'] == '0' + mo]
+    df2 = df_all[df_all['月'] == '0' + mo + '月']
 else:
-    df2 = df_all[df_all['月'] == mo]
+    df2 = df_all[df_all['月'] == mo + '月']
 
 st.dataframe(df_all)    
 st.dataframe(df2)
