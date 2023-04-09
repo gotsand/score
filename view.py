@@ -43,7 +43,7 @@ st.write(prize)
 df_all['月'] = l_mm
 df_all['日付'] = l_dd
 
-st.write('0' + mo)
+st.write('東京は人が多過ぎ')
 
 df2 = df_all[df_all['月'] == mo + '月']
 
