@@ -29,7 +29,8 @@ for date in l_date:
 l_vmm = ['4月', '3月', '2月', '1月']
 #l_vmm = ['12月', '11月', '10月', '9月']
 
-st.write('東京でそれなりに楽しくやってます!')
+st.write('まあ楽しくやってます。')
+st.write('それにしても職場付近のランチがバカ高いわ(*_*)')
 
 target = st.selectbox(label="表示月選択", options=l_vmm)
 
