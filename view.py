@@ -30,8 +30,8 @@ for date in l_date:
 l_vmm = ['4月', '3月', '2月', '1月']
 #l_vmm = ['12月', '11月', '10月', '9月']
 
-
-hitori = st.selectbox(label="ひとりごと", options='聞かない','聞く')
+l_kiku = ['聞かない', '聞く']
+hitori = st.selectbox(label="ひとりごと", options=l_kiku)
 if hitori == '聞く':
     st.write('まあ楽しくやってます')
     st.write('職場付近のランチ代がバカ高くて困るわ')
