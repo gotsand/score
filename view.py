@@ -12,7 +12,7 @@ dt_now = datetime.datetime.now()
 date = str(dt_now.strftime('%m/%d'))
 month = int(dt_now.strftime('%m'))
 
-st.title('SAKURA得点表')
+st.title('SAKURA 得点表')
 
 df_all = pd.read_csv('master.csv', encoding = 'UTF-8-sig')
 df_all['参加点'] = 2
