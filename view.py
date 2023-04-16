@@ -32,7 +32,8 @@ l_vmm = ['4月', '3月', '2月', '1月']
 
 st.write('《ひとりごと》')
 st.write('まあ楽しくやってます')
-st.write('職場付近のランチがバカ高くて困るわ')
+st.write('職場付近のランチ代がバカ高くて困るわ')
+st.write('あと人が多すぎ')
 st.write(' ')
 
 target = st.selectbox(label="表示月選択", options=l_vmm)
