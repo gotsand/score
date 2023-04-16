@@ -21,8 +21,8 @@ l_date = df_all['日付'].tolist()
 for date in l_date:
     x = date.find('月')
     dd = date[x+1:]
-#    if len(dd) == 2:
-#        dd = '0' + dd
+    if len(dd) == 2:
+        dd = '0' + dd
     l_dd.append(dd)
     mm = date[0:x+1]
     l_mm.append(mm)
