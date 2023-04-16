@@ -30,15 +30,7 @@ for date in l_date:
 l_vmm = ['4月', '3月', '2月', '1月']
 #l_vmm = ['12月', '11月', '10月', '9月']
 
-l_kiku = ['聞かない', '聞く']
-hitori = st.selectbox(label="ひとりごと", options=l_kiku)
-if hitori == '聞く':
-    st.write('まあ楽しくやってます')
-    st.write('職場付近のランチ代がバカ高くて困るわ')
-    st.write('あと、どこも人が多すぎ')
-    st.write(' ')
-
-target = st.selectbox(label="表示月選択", options=l_vmm)
+target = st.selectbox(label="＜表示月選択＞", options=l_vmm)
 
 y = target.find('月')
 mo = target[0:y]
@@ -110,3 +102,11 @@ st.dataframe(df3)
 df_p.set_index('なまえ',inplace=True)
 st.write('\n\n得点グラフ')
 st.bar_chart(df_p)
+
+l_kiku = ['聞かない', '聞く']
+hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
+if hitori == '聞く':
+    st.write('まあ楽しくやってます')
+    st.write('職場付近のランチ代がバカ高くて困るわ')
+    st.write('あと、どこも人が多すぎ')
+    st.write(' ')
