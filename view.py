@@ -29,7 +29,7 @@ for date in l_date:
     mm = date[0:x+1]
     l_mm.append(mm)
 
-l_vmm = ['4月', '3月', '2月', '1月']
+l_vmm = ['4月',  '3月', '2月', '1月'] 
 #l_vmm = ['12月', '11月', '10月', '9月']
 
 target = st.selectbox(label="＜表示月選択＞", options=l_vmm)
@@ -111,4 +111,4 @@ if hitori == '聞く':
     st.write('一ヶ月で東京と自宅を６往復だわ')
     st.write('そのわりに一度も富士山見てないな')
     st.write('曇ってるか寝てるか')
-    st.write('標高が高すぎて職場の窓際が怖い')
+    st.write('職場が高層すぎて窓際が怖い')
