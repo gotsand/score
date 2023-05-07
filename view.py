@@ -108,5 +108,5 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('地方都市で飲むぞー')
     st.write('')
+    st.write('明日は休みではないのです。早朝東京に戻るのです。')
