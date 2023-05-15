@@ -77,7 +77,6 @@ df3 = df3.drop('得点合計', axis=1)
 
 df_p = df3.iloc[0:-1,0:-2]
 
-
 df3 = pd.merge(df3, df7, on='なまえ', how='left')
 df3 = df3.sort_values(['合計', '平均'], ascending=False).reset_index(drop=True)
 
@@ -108,5 +107,6 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('')
-    st.write('ダイエット中。膝が痛むので軽くなってからバドします。なかなかやせんな。')
+    st.write('岐阜のみなさま都会からこんばんは')
+    st.write('ダイエット中。膝が痛むので軽くなってからバドします。なかなか体重減らんわ。')
+    st.write('新宿がきらい。')
