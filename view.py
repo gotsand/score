@@ -108,4 +108,4 @@ l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
     st.write('')
-    st.write('なんもないよ')
+    st.write('15点で2億になります。')
