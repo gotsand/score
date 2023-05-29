@@ -108,5 +108,4 @@ l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
     st.write('')
-    st.write('早朝フライトで羽田に移動中')
-    st.write('セントレア遠いよね')
+    st.write('なんもないよ')
