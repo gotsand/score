@@ -5,6 +5,7 @@ import pandas as pd
 import datetime
 import numpy as np
 import pickle
+from PIL import Image
 
 st.set_page_config(page_title="得点表", layout="wide")
 pd.options.display.float_format = '{:.1f}'.format
@@ -107,5 +108,6 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('')
-    st.write('テレビがないの')
+    st.write('奥が深い')
+    image = Image.open('IMG_0633.jpg')
+    st.image(image, caption='サンプル',use_column_width=True)
