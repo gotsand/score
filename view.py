@@ -108,7 +108,4 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('奥が深い')
-    image = Image.open('IMG_0633.jpg')
-    im_rotate = image.rotate(-90)
-    st.image(im_rotate, use_column_width=True)
+    st.write('市大会突破。こどものハンド部中体連の話。')
