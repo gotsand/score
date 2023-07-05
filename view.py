@@ -30,7 +30,7 @@ for date in l_date:
     mm = date[0:x+1]
     l_mm.append(mm)
 
-l_vmm = ['6月', '5月', '4月', '3月', '2月', '1月'] 
+l_vmm = ['7月', '6月', '5月', '4月', '3月', '2月', '1月'] 
 #l_vmm = ['12月', '11月', '10月', '9月']
 
 target = st.selectbox(label="＜表示月選択＞", options=l_vmm)
@@ -108,4 +108,4 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('市大会突破。こどものハンド部中体連の話。')
+    st.write('体重５ｋｇ減達成！！明日はイタリアン食べ放題')
