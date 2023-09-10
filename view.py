@@ -108,4 +108,4 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('Ｕ１８野球代表おめでとう！)
+    st.write('Ｕ１８野球代表おめでとう！')
