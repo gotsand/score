@@ -109,6 +109,6 @@ l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
     st.write('年間累計は過去１２か月の得点の累積となります。')
-    st.write('酒がうまい！！！。')
+    st.write('酒がうまい！！！')
     image = Image.open('IMG_1876.jpg')
     st.image(image, caption='おさけ',use_column_width=True)
