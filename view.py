@@ -108,4 +108,6 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('')
+    st.write('年間累計は過去１２か月の得点の累積となります')
+    image = Image.open('test.png')
+    st.image(image, caption='サンプル',use_column_width=True)
