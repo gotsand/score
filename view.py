@@ -108,6 +108,6 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('歌謡バー')
-    image = Image.open('IMG_1910.jpg')
+    st.write('歌謡バー。奥が深い。')
+    image = Image.open('IMG_1910.jpeg')
     st.image(image, caption='歌謡バー',use_column_width=True)
