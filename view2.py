@@ -108,6 +108,4 @@ st.bar_chart(df_p)
 l_kiku = ['聞かない', '聞く']
 hitori = st.selectbox(label="＜ひとりごと＞", options=l_kiku)
 if hitori == '聞く':
-    st.write('雪が降りそうなので帰宅難民は嫌なので、今日は在宅勤務にする。')
-    image = Image.open('IMG_1865.jpg')
-    st.image(image, caption='職場近く',use_column_width=True)
+    st.write('単身赴任２年目突入、名古屋に転勤の気配はありませんね')
